@@ -1,8 +1,11 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
   opts = {
     window = {
-      position = "left",
+      mappings = {
+        ["h"] = "navigate_up",
+      },
     },
   },
 }
