@@ -14,6 +14,10 @@ vim.keymap.set("v", "H", "^")
 vim.keymap.set("v", "L", "$")
 vim.keymap.set("v", "K", ":move '<-2<CR>gv-gv", opts)
 vim.keymap.set("v", "J", ":move '>+1<CR>gv-gv", opts)
+vim.keymap.set("n", "<c-d>", "10j")
+vim.keymap.set("n", "<c-u>", "10k")
+vim.keymap.set("v", "<c-d>", "10j")
+vim.keymap.set("v", "<c-u>", "10k")
 
 -- Clear search highlights
 vim.keymap.set("n", "<c-n>", ":nohlsearch<CR>", opts)
