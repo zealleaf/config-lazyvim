@@ -2,16 +2,16 @@ return {
   {
     "MagicDuck/grug-far.nvim",
     keys = {
-      { "<leader>sr", false, mode = { "n", "v" } },
+      { ";f", false, mode = { "n", "v" } },
       {
-        "<leader>srg",
+        ";fg",
         mode = { "n" },
         ":lua require('grug-far').open({ transient = true })<cr>",
         desc = "global",
         silent = true,
       },
       {
-        "<leader>srt",
+        ";ff",
         function()
           local is_visual = vim.fn.mode():lower():find("v")
           if is_visual then -- needed to make visual selection work
@@ -27,21 +27,21 @@ return {
         silent = true,
       },
       {
-        "<leader>srl",
+        ";fb",
         mode = { "n" },
         ":lua require('grug-far').open({ prefills = { paths = vim.fn.expand('%') } })<cr>",
         desc = "local",
         silent = true,
       },
       {
-        "<leader>srw",
+        ";fw",
         mode = { "n" },
         ":lua require('grug-far').open({ prefills = { search = vim.fn.expand('<cword>') } })<cr>",
         desc = "word",
         silent = true,
       },
       {
-        "<leader>srw",
+        ";w",
         mode = { "v" },
         ":lua require('grug-far').with_visual_selection({ prefills = { paths = vim.fn.expand('%') } })<cr>",
         desc = "word",

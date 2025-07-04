@@ -8,7 +8,7 @@ return {
       { "R", mode = { "o", "x" }, false },
       { "<c-s>", mode = { "c" }, false },
       {
-        "<leader>zf",
+        ";j",
         mode = { "n", "x", "o" },
         function()
           require("flash").jump()

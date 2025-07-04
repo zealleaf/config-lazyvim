@@ -18,6 +18,8 @@ vim.keymap.set("n", "<c-d>", "10j")
 vim.keymap.set("n", "<c-u>", "10k")
 vim.keymap.set("v", "<c-d>", "10j")
 vim.keymap.set("v", "<c-u>", "10k")
+vim.keymap.set({ "n", "v" }, ";", "<Nop>", opts)
+vim.keymap.set({ "n", "v" }, ",", "<Nop>", opts)
 
 -- Clear search highlights
 vim.keymap.set("n", "<c-n>", ":nohlsearch<CR>", opts)

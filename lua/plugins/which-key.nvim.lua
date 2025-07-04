@@ -2,12 +2,22 @@ local wk = require("which-key")
 
 wk.add({
   { mode = { "n", "v" } },
-  { "<leader>z", group = "+z-keymaps" },
+  { ";", group = "+diy-keymaps" },
 })
 
 wk.add({
   { mode = { "n", "v" } },
-  { "<leader>sr", group = "+grug-far" },
+  { ";j", group = "jumpking" },
+})
+
+wk.add({
+  { mode = { "n", "v" } },
+  { ";f", group = "+grug-far" },
+})
+
+wk.add({
+  { mode = { "n", "v" } },
+  { ";y", group = "+yazi" },
 })
 
 return {

@@ -11,6 +11,9 @@ return {
   {
     "olimorris/codecompanion.nvim",
     opts = {
+      opts = {
+        language = "Chinese",
+      },
       strategies = {
         chat = {
           adapter = "deepseek",
