@@ -7,6 +7,7 @@ return {
     { "<leader>a", "<cmd>CodeCompanionChat Toggle<cr>", mode = { "n", "v" }, desc = "CodeCompanion Chat Toggle" },
     { "ga", "<cmd>CodeCompanionChat Add<cr>", mode = "v", desc = "CodeCompanion Chat Add" },
   },
+  cmd = "CodeCompanion", -- if you're lazy-loading CodeCompanion
   init = function()
     vim.cmd([[cab cc CodeCompanion]])
   end,
