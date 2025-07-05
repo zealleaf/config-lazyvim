@@ -1,12 +1,10 @@
 return {
   "ravitemer/mcphub.nvim",
+  build = "bundled_build.lua", -- Bundles `mcp-hub` binary along with the neovim plugin
+  opts = {
+    use_bundled_binary = true,
+  },
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
-  build = "bundled_build.lua", -- Bundles `mcp-hub` binary along with the neovim plugin
-  config = function()
-    require("mcphub").setup({
-      use_bundled_binary = true, -- Use local `mcp-hub` binary
-    })
-  end,
 }
