@@ -9,7 +9,6 @@ local opts = {
   silent = true,
 }
 
--- General
 map("n", "H", "^")
 map("n", "L", "$")
 map("v", "H", "^")
@@ -25,7 +24,6 @@ map({ "n", "v" }, ",", "<Nop>", opts)
 map("n", "<c-n>", ":nohlsearch<CR>", opts) -- Clear search highlights
 map("n", "x", '"_x') -- Delete single character without copying into register
 
--- VSCode
 if vim.g.vscode then
   -- Buffer management --
   map("n", "<leader>bo", "<Cmd>lua require('vscode').call('workbench.action.closeOtherEditors')<CR>")
@@ -64,7 +62,7 @@ if vim.g.vscode then
   map("n", "<leader>cf", "<Cmd>lua require('vscode').call('editor.action.formatDocument')<CR>")
   map("v", "<leader>cf", "<Cmd>lua require('vscode').call('editor.action.formatSelection')<CR>")
   map("n", "<leader>ca", "<Cmd>lua require('vscode').call('editor.action.quickFix')<CR>")
-  map("n", "<leader>cA", "<Cmd>lua require('vscode').call('editor.action.quickFix')<CR>")
+  map("n", "<leader>cA", "<Cmd>lua require('vscode').call('editor.action.sourceAction')<CR>")
   map("n", "<leader>cr", "<Cmd>lua require('vscode').call('editor.action.rename')<CR>")
   -- Diagnostics
   map("n", "<leader>cd", "<Cmd>lua require('vscode').call('editor.action.showHover')<CR>")
@@ -81,10 +79,11 @@ if vim.g.vscode then
 
   -- Others --
   map("n", "<c-s>", "<Cmd>lua require('vscode').call('workbench.action.files.save')<CR>")
+  map("n", "<c-/>", "<Cmd>lua require('vscode').call('workbench.action.terminal.toggleTerminal')<CR>")
   map("n", "<leader>e", "<Cmd>lua require('vscode').call('workbench.view.explorer')<CR>")
   map("n", "<leader>,", "<Cmd>lua require('vscode').call('workbench.files.action.focusOpenEditorsView')<CR>")
-  map("n", "<c-/>", "<Cmd>lua require('vscode').call('workbench.action.terminal.toggleTerminal')<CR>")
   map("n", "<leader>a", "<Cmd>lua require('vscode').call('workbench.action.toggleAuxiliaryBar')<CR>")
   map("n", "<leader>l", "<Cmd>lua require('vscode').call('workbench.view.extensions')<CR>")
   map("n", "<leader>gg", "<Cmd>lua require('vscode').call('lazygit-vscode.toggle')<CR>")
+  map("n", "<leader>yy", "<Cmd>lua require('vscode').call('yazi-vscode.toggle')<CR>")
 end
