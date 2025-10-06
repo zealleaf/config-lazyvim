@@ -4,6 +4,7 @@
 
 vim.g.snacks_animate = false
 vim.g.lazyvim_picker = "snacks"
+vim.opt.clipboard = "unnamedplus"
 
 -- Clipboard for SSH, use osc52 as clipboard provider
 if not vim.g.vscode and os.getenv("SSH_TTY") then
